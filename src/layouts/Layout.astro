@@ -1,5 +1,6 @@
 ---
 import 'svelte-material-ui/bare.css';
+import 'vuetify/styles';
 
 type Props = {
 	title: string;
@@ -28,11 +29,13 @@ const { title } = Astro.props;
 				class="container tw-flex tw-flex-wrap tw-justify-between tw-items-center tw-mx-auto"
 			  >
 				<a href="/" class="tw-flex tw-items-center">
-				  <img
+				  
+					<!-- <img
 					src="/favicon.svg"
 					class="tw-mr-3 tw-h-6 sm:tw-h-9"
 					alt="Astro Logo"
-				  />
+				  /> -->
+				  
 				  <span
 					class="tw-self-center tw-text-xl tw-font-semibold tw-whitespace-nowrap"
 					>{title}
@@ -59,7 +62,7 @@ const { title } = Astro.props;
 		</div>
 	  </body>
 </html>
-<!-- <style is:global>
+<style is:global>
 	:root {
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
@@ -72,4 +75,4 @@ const { title } = Astro.props;
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
-</style> -->
+</style>

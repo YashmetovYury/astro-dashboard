@@ -1,6 +1,7 @@
 <script lang="ts">
     import DataTable, { Head, Body, Row, Cell } from '@smui/data-table';
-    import type { Product } from 'types';
+    import type { Product } from '../types';
+    import { hiddenCategories } from '../state';
   
     export let products: Product[];
   </script>
@@ -16,8 +17,9 @@
       </Row>
     </Head>
     <Body>
-      {#each products as item (item.id)}
-        <Row>
+      {#each products.filter((product) => !$hiddenCategories.includes(product.category)) as item (item.id)}
+      <!-- {#each products as item (item.id)} -->
+         <Row>
           <Cell>{item.title}</Cell>
           <Cell>{item.category}</Cell>
           <Cell>{item.description}</Cell>

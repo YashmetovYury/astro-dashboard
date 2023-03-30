@@ -14,14 +14,24 @@
     "@astrojs/svelte": "^2.1.0",
     "@astrojs/tailwind": "^3.1.1",
     "@astrojs/vue": "^2.1.0",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.15",
+    "@nanostores/react": "^0.4.1",
+    "@nanostores/vue": "^0.7.0",
+    "@types/randomcolor": "^0.5.7",
     "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",
     "astro": "^2.1.8",
+    "nanostores": "^0.7.4",
+    "randomcolor": "^0.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "recharts": "^2.5.0",
     "svelte": "^3.57.0",
     "svelte-material-ui": "^7.0.0-beta.0",
     "tailwindcss": "^3.3.0",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vuetify": "^3.1.12"
   }
 }

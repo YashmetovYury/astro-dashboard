@@ -7,10 +7,10 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), vue(), svelte(), tailwind()],
+  integrations: [react(), vue({ appEntrypoint: '/src/pages/_app' }), svelte(), tailwind()],
   vite: {
     ssr: {
-    noExternal: ['@smui/**/*'],
+    noExternal: ['@smui/**/*', 'vuetify'],
     },
     },
     }); 
