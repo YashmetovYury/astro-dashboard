@@ -1,10 +1,17 @@
 ---
+import ProductTable from '../components/ProductTable.svelte';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+// import Card from '../components/Card.astro';
+import type { Product } from '../types';
+
+// fetch data
+const products: Product[] = await fetch('https://dummyjson.com/products')
+.then((res) => res.json())
+.then((res) => res.products);
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
+	<!-- <main>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
@@ -27,12 +34,20 @@ import Card from '../components/Card.astro';
 				body="Explore a galaxy of community-built starter themes."
 			/>
 			<Card
+				href="https://astro.build/themes/"
+				title="Themes"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
 				href="https://astro.build/chat/"
 				title="Community"
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
 		</ul>
-	</main>
+	</main> -->
+
+	<ProductTable products={products} />
+
 </Layout>
 
 <style>
